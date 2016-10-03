@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AppChat</string>
+    <string name="symbolimage">symbolImage</string>
+    <string name="username">Name</string>
+    <string name="signin">Sign In</string>
+    <string name="regist">Register here</string>
+    <string name="bannerregist">bannerRegist</string>
+    <string name="example_mail_com">example@mail.com</string>
+    <string name="passwordHint">*****</string>
+    <string name="usernameHint">username</string>
+    <string name="register">Register</string>
+    <string name="register_here">Register Here</string>
+    <string name="gender">GENDER</string>
+    <string name="man">Man</string>
+    <string name="women">Women</string>
+    <string name="others">Others</string>
+    <string name="profile">Profile</string>
+    <string name="image">Images</string>
+    <string name="age">Ages</string>
+    <string name="school_name">Shool Name</string>
+    <string name="company_name">Company Name</string>
+    <string name="favorite">Favorite</string>
+    <string name="relationship_status">Relationship Status</string>
+    <string name="address">Address</string>
+</resources>

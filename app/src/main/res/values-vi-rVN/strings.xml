@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppChat</string>
+    <string name="symbolimage">symbolImage</string>
+    <string name="username">Tên Đăng Nhập</string>
+    <string name="signin">Đăng Nhập</string>
+    <string name="regist">Đăng ký tại đây</string>
+    <string name="bannerregist">bannerRegist</string>
+    <string name="example_mail_com">example@mail.com</string>
+    <string name="passwordHint">*****</string>
+    <string name="usernameHint">Tên Đăng Nhập</string>
+    <string name="register">Đăng Ký</string>
+    <string name="register_here">Đăng Ký tại đây</string>
+    <string name="gender">Giới Tính</string>
+    <string name="man">Đàn Ông</string>
+    <string name="women">Phụ Nữ</string>
+    <string name="others">Khác</string>
+    <string name="profile">Hồ Sơ</string>
+    <string name="image">Hình Ảnh</string>
+    <string name="age">Tuổi</string>
+    <string name="school_name">Tên Trường Học</string>
+    <string name="company_name">Tên Công Ty</string>
+    <string name="favorite">Sở Thích</string>
+    <string name="relationship_status">Tình Trạng Quan Hệ</string>
+    <string name="address">Địa Chỉ</string>
+</resources>
