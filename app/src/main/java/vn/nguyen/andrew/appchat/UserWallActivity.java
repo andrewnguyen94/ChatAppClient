@@ -26,7 +26,6 @@ public class UserWallActivity extends AppCompatActivity {
     private MLRoundedImageView ml;
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private String[] tabLayout_Titles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,17 +51,12 @@ public class UserWallActivity extends AppCompatActivity {
             coverImageDrawable = new BitmapDrawable(getResources(), coverImageBitmap);
         }
         setUserWallImage(avatarBitmap, coverImageDrawable, user_target_name, coverImageLayout, avatarButton, usernameText);
-        viewPager = (ViewPager) findViewById(R.id.viewPager_userwall);
-        CustomAdapterUserWall customAdapterUserWall = new CustomAdapterUserWall(getSupportFragmentManager(), username, user_target_name);
-        viewPager.setAdapter(customAdapterUserWall);
-
         tabLayout = (TabLayout) findViewById(R.id.tablayout_userwall);
-        tabLayout_Titles = new String[]{getResources().getString(R.string.profile), getResources().getString(R.string.image)};
-        for(int i = 0; i < 2; i++){
-            tabLayout.getTabAt(i).setText(tabLayout_Titles[i]);
-        }
-
-
+        viewPager = (ViewPager) findViewById(R.id.viewPager_userwall);
+        CustomAdapterUserWall customAdapterUserWall = new CustomAdapterUserWall(getSupportFragmentManager(),
+                username, user_target_name, getApplication());
+        viewPager.setAdapter(customAdapterUserWall);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     private void setUserWallImage(Bitmap avatar, BitmapDrawable coverImage, String username,

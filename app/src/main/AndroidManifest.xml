@@ -20,7 +20,8 @@
         <activity
             android:name=".UserActivity"
             android:theme="@style/Theme.AppCompat" />
-        <activity android:name=".UserWallActivity"></activity>
+        <activity android:name=".UserWallActivity"
+            android:theme="@style/Theme.AppCompat"/>
     </application>
 
 </manifest>

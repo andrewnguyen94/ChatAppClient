@@ -12,4 +12,5 @@
     <color name="colorPressButton">#f8daf1</color>
     <color name="colorBackgroundFragment">#e2dbdb</color>
     <color name="colorBackgroundListView">#FFFFFFFF</color>
+    <color name="colorTextSelected">#52fceb</color>
 </resources>

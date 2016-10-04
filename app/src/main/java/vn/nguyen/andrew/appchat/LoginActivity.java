@@ -132,10 +132,10 @@ public class LoginActivity extends Activity implements Button.OnClickListener,Lo
                 if(jsonObject != null){
                     try {
                         String jsonString = jsonObject.getString("response");
-                        avatarBase64 = jsonObject.getString("avatar_base64");
-                        username = jsonObject.getString("username");
-                        coverImageBase64 = jsonObject.getString("cover_image_base64");
                         if(jsonString.equals(LOGINSUCCESS)){
+                            avatarBase64 = jsonObject.getString("avatar_base64");
+                            username = jsonObject.getString("username");
+                            coverImageBase64 = jsonObject.getString("cover_image_base64");
                             Intent userIntent = new Intent(LoginActivity.this, UserActivity.class);
                             userIntent.putExtra(AVATARBASE64STRING, avatarBase64);
                             userIntent.putExtra(USERNAME, username);

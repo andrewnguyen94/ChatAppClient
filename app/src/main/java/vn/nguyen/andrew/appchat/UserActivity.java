@@ -29,13 +29,12 @@ public class UserActivity extends AppCompatActivity {
             username = bundle.getString(LoginActivity.USERNAME);
             coverImageBase64 = bundle.getString(LoginActivity.COVERIMAGE64STRING);
         }
-
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         CustomAdapter customAdapter = new CustomAdapter(getSupportFragmentManager(), getApplication(),
                 avatarBase64, username, coverImageBase64);
         viewPager.setAdapter(customAdapter);
-
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setupWithViewPager(viewPager);
         for(int i = 0; i < 4; i++){
             tabLayout.getTabAt(i).setIcon(btnIcons[i]);

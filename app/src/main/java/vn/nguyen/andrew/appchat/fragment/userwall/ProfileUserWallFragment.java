@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -21,6 +22,7 @@ import vn.nguyen.andrew.appchat.LoginActivity;
 import vn.nguyen.andrew.appchat.R;
 import vn.nguyen.andrew.appchat.ServerRequest;
 import vn.nguyen.andrew.appchat.Utilities;
+import vn.nguyen.andrew.appchat.custom.ProfileUserWallAdapterCustom;
 import vn.nguyen.andrew.appchat.custom.ProfileUserWallAdapterDefault;
 import vn.nguyen.andrew.appchat.fragment.ListView.ProfileListViewUserWallCustom;
 import vn.nguyen.andrew.appchat.fragment.ListView.ProfileListViewUserWallDefault;
@@ -79,7 +81,10 @@ public class ProfileUserWallFragment extends Fragment{
             e.printStackTrace();
         }
         populateListView();
-
+        ArrayAdapter<ProfileListViewUserWallDefault> arrayListDefault = new ProfileUserWallAdapterDefault(getContext(), prDefault);
+        ArrayAdapter<ProfileListViewUserWallCustom> arrayListCustom = new ProfileUserWallAdapterCustom(getContext(), prCustom);
+        profile_default.setAdapter(arrayListDefault);
+        profile_custom.setAdapter(arrayListCustom);
 
         return view;
     }
