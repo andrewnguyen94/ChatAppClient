@@ -23,4 +23,6 @@
     <string name="favorite">Sở Thích</string>
     <string name="relationship_status">Tình Trạng Quan Hệ</string>
     <string name="address">Địa Chỉ</string>
+    <string name="basicInfo">Thông tin cơ bản</string>
+    <string name="advanceInfo">Thông tin nâng cao</string>
 </resources>

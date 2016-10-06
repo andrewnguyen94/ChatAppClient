@@ -3,8 +3,10 @@ package vn.nguyen.andrew.appchat;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Paint;
 import android.util.Base64;
 import android.util.TypedValue;
+import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -41,6 +43,15 @@ public class Utilities {
         float bt_text = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 42, r.getDisplayMetrics());
 
         return (bt_text - bt_ava) * 2;
+    }
+
+    public void setUnderlineText(String text, TextView t, int colorUnderLine){
+        Paint p = new Paint();
+        p.setColor(colorUnderLine);
+
+        t.setPaintFlags(p.getColor());
+        t.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+        t.setText(text);
     }
 
 }

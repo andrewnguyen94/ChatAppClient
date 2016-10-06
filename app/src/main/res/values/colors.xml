@@ -13,4 +13,5 @@
     <color name="colorBackgroundFragment">#e2dbdb</color>
     <color name="colorBackgroundListView">#FFFFFFFF</color>
     <color name="colorTextSelected">#52fceb</color>
+    <color name="colorUnderline">#f2e339</color>
 </resources>

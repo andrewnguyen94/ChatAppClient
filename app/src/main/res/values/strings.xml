@@ -22,4 +22,6 @@
     <string name="favorite">Favorite</string>
     <string name="relationship_status">Relationship Status</string>
     <string name="address">Address</string>
+    <string name="basicInfo">Basic Information</string>
+    <string name="advanceInfo">Advanced Information</string>
 </resources>

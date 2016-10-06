@@ -22,6 +22,8 @@ import vn.nguyen.andrew.appchat.LoginActivity;
 import vn.nguyen.andrew.appchat.R;
 import vn.nguyen.andrew.appchat.ServerRequest;
 import vn.nguyen.andrew.appchat.Utilities;
+import vn.nguyen.andrew.appchat.custom.ListTitleAdapter;
+import vn.nguyen.andrew.appchat.custom.MergerAdapter;
 import vn.nguyen.andrew.appchat.custom.ProfileUserWallAdapterCustom;
 import vn.nguyen.andrew.appchat.custom.ProfileUserWallAdapterDefault;
 import vn.nguyen.andrew.appchat.fragment.ListView.ProfileListViewUserWallCustom;
@@ -46,13 +48,14 @@ public class ProfileUserWallFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         prDefault = new ArrayList<ProfileListViewUserWallDefault>();
         prCustom = new ArrayList<ProfileListViewUserWallCustom>();
+        MergerAdapter mergerAdapter = new MergerAdapter();
         params = new ArrayList<NameValuePair>();
         request = new ServerRequest();
         username = getArguments().getString(LoginActivity.USERNAME);
         user_target_name = getArguments().getString(LoginActivity.USERTARGETNAME);
         View view = inflater.inflate(R.layout.profile_userwall_layout, container, false);
-        profile_default = (ListView) view.findViewById(R.id.list_view_profile_default);
-        profile_custom = (ListView) view.findViewById(R.id.list_view_profile_custom);
+        profile_default = (ListView) view.findViewById(R.id.list_view_profile);
+//        profile_custom = (ListView) view.findViewById(R.id.list_view_profile_custom);
 
         params.add(new BasicNameValuePair(LoginActivity.USERTARGETNAME, user_target_name));
         params.add(new BasicNameValuePair(LoginActivity.USERNAME, username));
@@ -83,8 +86,15 @@ public class ProfileUserWallFragment extends Fragment{
         populateListView();
         ArrayAdapter<ProfileListViewUserWallDefault> arrayListDefault = new ProfileUserWallAdapterDefault(getContext(), prDefault);
         ArrayAdapter<ProfileListViewUserWallCustom> arrayListCustom = new ProfileUserWallAdapterCustom(getContext(), prCustom);
-        profile_default.setAdapter(arrayListDefault);
-        profile_custom.setAdapter(arrayListCustom);
+        //add Adapter to MergerAdapter
+        mergerAdapter.addAdapter(new ListTitleAdapter(getContext(), getResources().getString(R.string.basicInfo), arrayListDefault));
+        mergerAdapter.addAdapter(arrayListDefault);
+
+        mergerAdapter.addAdapter(new ListTitleAdapter(getContext(), getResources().getString(R.string.advanceInfo), arrayListCustom));
+        mergerAdapter.addAdapter(arrayListCustom);
+
+        profile_default.setAdapter(mergerAdapter);
+//        profile_custom.setAdapter(arrayListCustom);
 
         return view;
     }
