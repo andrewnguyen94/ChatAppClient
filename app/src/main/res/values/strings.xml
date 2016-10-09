@@ -24,4 +24,8 @@
     <string name="address">Address</string>
     <string name="basicInfo">Basic Information</string>
     <string name="advanceInfo">Advanced Information</string>
+    <string name="watch_avatar">Watch Avatar</string>
+    <string name="take_newphoto">Take a new photo</string>
+    <string name="choose_existed_photo">Choose an existed photo</string>
+    <string name="avatar">Avatar</string>
 </resources>

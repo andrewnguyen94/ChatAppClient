@@ -20,8 +20,11 @@
         <activity
             android:name=".UserActivity"
             android:theme="@style/Theme.AppCompat" />
-        <activity android:name=".UserWallActivity"
-            android:theme="@style/Theme.AppCompat"/>
+        <activity
+            android:name=".UserWallActivity"
+            android:theme="@style/Theme.AppCompat" />
+        <activity android:name=".PopupActivity"
+            android:theme="@style/AppTheme.PopupTheme"/>
     </application>
 
 </manifest>

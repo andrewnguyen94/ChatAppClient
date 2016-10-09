@@ -45,13 +45,4 @@ public class Utilities {
         return (bt_text - bt_ava) * 2;
     }
 
-    public void setUnderlineText(String text, TextView t, int colorUnderLine){
-        Paint p = new Paint();
-        p.setColor(colorUnderLine);
-
-        t.setPaintFlags(p.getColor());
-        t.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
-        t.setText(text);
-    }
-
 }

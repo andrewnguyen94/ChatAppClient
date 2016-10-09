@@ -2,6 +2,7 @@ package vn.nguyen.andrew.appchat;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -14,18 +15,28 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
 import vn.nguyen.andrew.appchat.custom.CustomAdapterUserWall;
+import vn.nguyen.andrew.appchat.fragment.ListView.PopupListView;
 import vn.nguyen.andrew.appchat.fragment.ProfileFragment;
 import vn.nguyen.andrew.appchat.image.MLRoundedImageView;
 
-public class UserWallActivity extends AppCompatActivity implements LoadImage, ImageButton.OnClickListener {
+public class UserWallActivity extends AppCompatActivity implements LoadImage, View.OnClickListener {
     private String avatar, coverImage, username, user_target_name;
     private Utilities utilities;
     private Bitmap avatarBitmap, coverImageBitmap;
@@ -37,12 +48,16 @@ public class UserWallActivity extends AppCompatActivity implements LoadImage, Im
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private Bundle ProfileFragmentArgs;
+    private List<PopupListView> plv;
+    public static LinearLayout main;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_wall);
+
+        main = (LinearLayout) findViewById(R.id.userWall);
         utilities = new Utilities();
         ml = new MLRoundedImageView(getApplication());
         Bundle bundle = getIntent().getExtras();
@@ -54,7 +69,9 @@ public class UserWallActivity extends AppCompatActivity implements LoadImage, Im
             ProfileFragmentArgs = bundle.getBundle(LoginActivity.BUNDLEPROFILEFRAGMENT);
         }
         avatarButton = (ImageButton) findViewById(R.id.avatar);
+        avatarButton.setClickable(true);
         backButton = (ImageButton) findViewById(R.id.backButton);
+        loadImage(backButton, R.drawable.back_icon_32px);
         backButton.setOnClickListener(this);
         coverImageLayout = (LinearLayout) findViewById(R.id.coverImage);
         usernameText = (TextView) findViewById(R.id.username);
@@ -85,8 +102,8 @@ public class UserWallActivity extends AppCompatActivity implements LoadImage, Im
         avaView.getLayoutParams().width = radius_int;
         avaView.getLayoutParams().height = radius_int;
         avaView.setImageBitmap(tmp);
+        avaView.setOnClickListener(this);
         usernameText.setText(username);
-        loadImage(backButton, R.drawable.back_icon_32px);
     }
 
     @Override
@@ -138,6 +155,18 @@ public class UserWallActivity extends AppCompatActivity implements LoadImage, Im
             pf.setArguments(ProfileFragmentArgs);
             transaction.add(pf, "PF");
             transaction.commit();
+        }else if(v.getId() == R.id.avatar){
+            float dim = (float) 0.5;
+            Intent popupAvatarIntent = new Intent(UserWallActivity.this, PopupActivity.class);
+            populateListViewPopupAvatar();
+            Bundle args = new Bundle();
+            args.putSerializable(LoginActivity.POPUPLISTVIEW, (Serializable) plv);
+            popupAvatarIntent.putExtra(LoginActivity.TITLEPOPUP, getResources().getString(R.string.avatar));
+            popupAvatarIntent.putExtra(LoginActivity.POPUPLISTVIEW, args);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+                main.setAlpha(dim);
+            }
+            startActivity(popupAvatarIntent);
         }
     }
 
@@ -150,6 +179,13 @@ public class UserWallActivity extends AppCompatActivity implements LoadImage, Im
         pf.setArguments(ProfileFragmentArgs);
         transaction.add(pf, "PF");
         transaction.commit();
+    }
+
+    private void populateListViewPopupAvatar(){
+        plv = new ArrayList<PopupListView>();
+        plv.add(new PopupListView(getResources().getString(R.string.watch_avatar)));
+        plv.add(new PopupListView(getResources().getString(R.string.take_newphoto)));
+        plv.add(new PopupListView(getResources().getString(R.string.choose_existed_photo)));
     }
 
 }

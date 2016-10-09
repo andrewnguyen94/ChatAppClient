@@ -25,4 +25,8 @@
     <string name="address">Địa Chỉ</string>
     <string name="basicInfo">Thông tin cơ bản</string>
     <string name="advanceInfo">Thông tin nâng cao</string>
+    <string name="watch_avatar">Xem ảnh đại diện</string>
+    <string name="take_newphoto">Chụp ảnh mới</string>
+    <string name="choose_existed_photo">Chọn ảnh có sẵn</string>
+    <string name="avatar">Ảnh đại diện</string>
 </resources>

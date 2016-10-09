@@ -40,6 +40,8 @@ public class LoginActivity extends Activity implements Button.OnClickListener,Lo
     public static final int IMAGEAVAWH = 200;
     public static final String USERPROFILEACCESS = "user profile";
     public static final String BUNDLEPROFILEFRAGMENT = "bundle profile fragment";
+    public static final String TITLEPOPUP = "title popup";
+    public static final String POPUPLISTVIEW = "popup list view";
 
 
 
