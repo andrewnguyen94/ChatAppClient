@@ -18,6 +18,7 @@ public class UserActivity extends AppCompatActivity {
     private String username;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private Bundle ProfileFragmentArgs;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,5 +41,6 @@ public class UserActivity extends AppCompatActivity {
             tabLayout.getTabAt(i).setIcon(btnIcons[i]);
         }
     }
+
 
 }

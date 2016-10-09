@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 
 import vn.nguyen.andrew.appchat.LoginActivity;
 import vn.nguyen.andrew.appchat.fragment.ChatFragment;
@@ -21,12 +22,15 @@ public class CustomAdapter extends FragmentPagerAdapter {
     private String avatarBase64;
     private String username;
     private String coverImageBase64;
+    private FragmentManager manager;
 
-    public CustomAdapter(FragmentManager fm, Context applicationContext, String avatarBase64, String username, String coverImageBase64) {
+    public CustomAdapter(FragmentManager fm, Context applicationContext, String avatarBase64,
+                         String username, String coverImageBase64) {
         super(fm);
         this.avatarBase64 = avatarBase64;
         this.username = username;
         this.coverImageBase64 = coverImageBase64;
+        this.manager = fm;
     }
 
     @Override

@@ -68,6 +68,7 @@ public class ServerRequest {
         Params param = new Params(url,params);
         Request myTask = new Request();
         try{
+            jobj = new JSONObject();
             jobj= myTask.execute(param).get();
         }catch (InterruptedException e) {
             e.printStackTrace();
