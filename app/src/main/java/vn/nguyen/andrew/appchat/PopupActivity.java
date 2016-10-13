@@ -34,6 +34,7 @@ public class PopupActivity extends Activity implements AdapterView.OnItemClickLi
     private LinearLayout userWall;
     private List<NameValuePair> params;
     private ServerRequest request;
+    private int totlaImage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -87,9 +88,13 @@ public class PopupActivity extends Activity implements AdapterView.OnItemClickLi
                         String res = jsonObject.getString("response");
                         if(res.equals("access success")){
                             avatarBase64 = jsonObject.getString(LoginActivity.AVATAR);
+                            totlaImage = jsonObject.getInt(LoginActivity.TOTALIMAGE);
                         }
                         Intent viewImageIntent = new Intent(PopupActivity.this, ViewImageActivity.class);
                         viewImageIntent.putExtra(LoginActivity.AVATARBASE64STRING, avatarBase64);
+                        viewImageIntent.putExtra(LoginActivity.USERNAME, username);
+                        viewImageIntent.putExtra(LoginActivity.IMAGEID, (int)(1));
+                        viewImageIntent.putExtra(LoginActivity.TOTALIMAGE, totlaImage);
                         startActivity(viewImageIntent);
                         finish();
                     }catch (Exception e){

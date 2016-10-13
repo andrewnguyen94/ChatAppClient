@@ -12,4 +12,6 @@
     <dimen name="margin_bottom_username_userwall">18dp</dimen>
     <dimen name="margin_top_backbutton_userwall">24dp</dimen>
     <dimen name="popup_height">60dp</dimen>
+    <dimen name="actionbar_imageview">60dp</dimen>
+    <dimen name="text_size_actionbar_imageview">16dp</dimen>
 </resources>

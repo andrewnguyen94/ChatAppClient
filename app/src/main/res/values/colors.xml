@@ -14,4 +14,5 @@
     <color name="colorBackgroundListView">#FFFFFFFF</color>
     <color name="colorTextSelected">#52fceb</color>
     <color name="colorUnderline">#f2e339</color>
+    <color name="actionbar">#3b000000</color>
 </resources>

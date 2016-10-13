@@ -5,4 +5,18 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
+
+    <style name="Theme.AppCompat.CustomTheme" parent="Theme.AppCompat">
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+    </style>
+
+    <style name="ActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/actionbar</item>
+        <item name="background">@color/actionbar</item>
+    </style>
 </resources>

@@ -36,5 +36,8 @@
         <item name="android:textColor">@color/colorText</item>
         <item name="textAllCaps">true</item>
     </style>
+    <style name="Theme.AppCompat.CustomTheme" parent="Theme.AppCompat">
+        <item name="android:actionBarStyle"></item>
+    </style>
 
 </resources>

@@ -45,6 +45,8 @@ public class LoginActivity extends Activity implements Button.OnClickListener,Lo
     public static final String POPUPLISTVIEW = "popup list view";
     public static final String IMAGEVIEWBASE64 = "image view base64";
     public static final String AVATAR = "avatar";
+    public static final String IMAGEID = "image id";
+    public static final String TOTALIMAGE = "total_image";
 
 
 

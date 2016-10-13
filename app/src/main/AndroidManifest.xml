@@ -26,7 +26,8 @@
         <activity
             android:name=".PopupActivity"
             android:theme="@style/AppTheme.PopupTheme" />
-        <activity android:name=".ViewImageActivity"></activity>
+        <activity android:name=".ViewImageActivity"
+            android:theme="@style/Theme.AppCompat.CustomTheme"/>
     </application>
 
 </manifest>
