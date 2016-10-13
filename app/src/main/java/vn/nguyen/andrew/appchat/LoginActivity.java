@@ -26,6 +26,7 @@ public class LoginActivity extends Activity implements Button.OnClickListener,Lo
     public static final String LOGINURL = "http://10.0.3.2:8080/login";
     public static final String USER_PROFILE_URL = "http://10.0.3.2:8080/user_profile";
     public static final String USER_PROFILE_PROFILE_URL = "http://10.0.3.2:8080/user_profile_profile";
+    public static final String VIEW_AVATAR = "http://10.0.3.2:8080/view_avatar";
 
     public static final float BYTES_PER_PX = 4.0f;
     public static final String LOGINSUCCESS = "Login Sucess";
@@ -42,6 +43,8 @@ public class LoginActivity extends Activity implements Button.OnClickListener,Lo
     public static final String BUNDLEPROFILEFRAGMENT = "bundle profile fragment";
     public static final String TITLEPOPUP = "title popup";
     public static final String POPUPLISTVIEW = "popup list view";
+    public static final String IMAGEVIEWBASE64 = "image view base64";
+    public static final String AVATAR = "avatar";
 
 
 

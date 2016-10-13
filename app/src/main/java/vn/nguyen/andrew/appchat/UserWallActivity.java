@@ -161,6 +161,7 @@ public class UserWallActivity extends AppCompatActivity implements LoadImage, Vi
             populateListViewPopupAvatar();
             Bundle args = new Bundle();
             args.putSerializable(LoginActivity.POPUPLISTVIEW, (Serializable) plv);
+            popupAvatarIntent.putExtra(LoginActivity.USERNAME, user_target_name);
             popupAvatarIntent.putExtra(LoginActivity.TITLEPOPUP, getResources().getString(R.string.avatar));
             popupAvatarIntent.putExtra(LoginActivity.POPUPLISTVIEW, args);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {

@@ -19,12 +19,14 @@
         <activity android:name=".RegistActivity" />
         <activity
             android:name=".UserActivity"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".UserWallActivity"
-            android:theme="@style/Theme.AppCompat" />
-        <activity android:name=".PopupActivity"
-            android:theme="@style/AppTheme.PopupTheme"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".PopupActivity"
+            android:theme="@style/AppTheme.PopupTheme" />
+        <activity android:name=".ViewImageActivity"></activity>
     </application>
 
 </manifest>
