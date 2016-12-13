@@ -101,6 +101,8 @@ public class PopupActivity extends Activity implements AdapterView.OnItemClickLi
                         e.printStackTrace();
                     }
                 }
+            }else if(position == 1 && content.equals(getResources().getString(R.string.take_newphoto))){
+
             }
         }
     }
