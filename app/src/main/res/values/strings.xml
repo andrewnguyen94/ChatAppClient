@@ -28,4 +28,7 @@
     <string name="take_newphoto">Take a new photo</string>
     <string name="choose_existed_photo">Choose an existed photo</string>
     <string name="avatar">Avatar</string>
+    <string name="couldnt_get_camera_list">Couldnt get camera list</string>
+    <string name="couldnt_dectect_a_camera">Couldnt detect a camera</string>
+    <string name="fail_to_create_new_directory">Fail to create new directory</string>
 </resources>

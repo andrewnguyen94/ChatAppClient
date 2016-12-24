@@ -102,7 +102,7 @@ public class PopupActivity extends Activity implements AdapterView.OnItemClickLi
                     }
                 }
             }else if(position == 1 && content.equals(getResources().getString(R.string.take_newphoto))){
-
+                Intent cameraPreviewIntent = new Intent(PopupActivity.this, Camera_layout.class);
             }
         }
     }

@@ -19,8 +19,7 @@
     <string name="image">Hình Ảnh</string>
     <string name="age">Tuổi</string>
     <string name="school_name">Tên Trường Học</string>
-    <string name="company_name">Tên Công Ty</string>
-    <string name="favorite">Sở Thích</string>
+    <string name="company_name">Tên Công Ty</string>camera
     <string name="relationship_status">Tình Trạng Quan Hệ</string>
     <string name="address">Địa Chỉ</string>
     <string name="basicInfo">Thông tin cơ bản</string>
@@ -29,4 +28,7 @@
     <string name="take_newphoto">Chụp ảnh mới</string>
     <string name="choose_existed_photo">Chọn ảnh có sẵn</string>
     <string name="avatar">Ảnh đại diện</string>
+    <string name="couldnt_get_camera_list">Không thể lấy được list </string>
+    <string name="couldnt_dectect_a_camera">Không thể truy cập vào được camera</string>
+    <string name="fail_to_create_new_directory">Lỗi khi tạo thư mục mới</string>
 </resources>
