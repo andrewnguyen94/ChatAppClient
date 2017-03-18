@@ -1,12 +1,9 @@
 package vn.nguyen.andrew.appchat;
 
-import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,16 +12,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import java.io.Serializable;
@@ -35,6 +27,7 @@ import vn.nguyen.andrew.appchat.custom.CustomAdapterUserWall;
 import vn.nguyen.andrew.appchat.fragment.ListView.PopupListView;
 import vn.nguyen.andrew.appchat.fragment.ProfileFragment;
 import vn.nguyen.andrew.appchat.image.MLRoundedImageView;
+import vn.nguyen.andrew.appchat.interfaces.LoadImage;
 
 public class UserWallActivity extends AppCompatActivity implements LoadImage, View.OnClickListener {
     private String avatar, coverImage, username, user_target_name;

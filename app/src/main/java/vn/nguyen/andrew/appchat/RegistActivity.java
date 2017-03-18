@@ -18,9 +18,10 @@ import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import vn.nguyen.andrew.appchat.interfaces.LoadImage;
 
 public class RegistActivity extends Activity implements LoadImage,Button.OnClickListener {
 

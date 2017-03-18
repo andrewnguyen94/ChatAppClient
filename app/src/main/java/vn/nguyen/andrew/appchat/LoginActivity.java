@@ -21,8 +21,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.nguyen.andrew.appchat.interfaces.LoadImage;
 
-public class LoginActivity extends Activity implements Button.OnClickListener,LoadImage{
+
+public class LoginActivity extends Activity implements Button.OnClickListener,LoadImage {
     public static final String LOGINURL = "http://10.0.3.2:8080/login";
     public static final String USER_PROFILE_URL = "http://10.0.3.2:8080/user_profile";
     public static final String USER_PROFILE_PROFILE_URL = "http://10.0.3.2:8080/user_profile_profile";

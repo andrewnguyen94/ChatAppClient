@@ -15,7 +15,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import vn.nguyen.andrew.appchat.LoadImage;
+import vn.nguyen.andrew.appchat.interfaces.LoadImage;
 import vn.nguyen.andrew.appchat.LoginActivity;
 import vn.nguyen.andrew.appchat.MemUtils;
 import vn.nguyen.andrew.appchat.R;

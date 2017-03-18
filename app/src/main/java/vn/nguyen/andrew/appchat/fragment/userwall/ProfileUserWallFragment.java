@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 import org.apache.http.NameValuePair;
@@ -17,7 +16,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import vn.nguyen.andrew.appchat.LoadImage;
 import vn.nguyen.andrew.appchat.LoginActivity;
 import vn.nguyen.andrew.appchat.R;
 import vn.nguyen.andrew.appchat.ServerRequest;

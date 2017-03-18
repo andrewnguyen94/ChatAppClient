@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import vn.nguyen.andrew.appchat.image.TouchImageView;
+import vn.nguyen.andrew.appchat.interfaces.LoadImage;
 
 public class ViewImageActivity extends AppCompatActivity implements LoadImage, View.OnClickListener{
     private TouchImageView imageView;
